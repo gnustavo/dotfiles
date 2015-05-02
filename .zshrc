@@ -49,9 +49,6 @@ plugins=()
 
 # User configuration
 
-export PATH="/home/gustavo/.pyenv/shims:/home/gustavo/.pyenv/bin:/home/gustavo/.plenv/shims:/home/gustavo/.plenv/bin:/home/gustavo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/gustavo/libexec/git-extensions"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
