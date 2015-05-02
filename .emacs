@@ -437,7 +437,7 @@
  '(gnus-visible-headers (quote ("^From:" "^Newsgroups:" "^Subject:" "^Date:" "^Followup-To:" "^Reply-To:" "^Organization:" "^Summary:" "^Keywords:" "^To:" "^[BGF]?Cc:" "^Posted-To:" "^Mail-Copies-To:" "^Apparently-To:" "^Gnus-Warning:" "^Resent-From:" "^X-Sent:" "^X-Spam" "^X-Greylist")))
  '(indent-tabs-mode nil)
  '(ispell-dictionary "american")
- '(ispell-dictionary-alist (quote (("american" "[a-zA-Z]" "[^a-zA-Z]" "[']" nil ("-d" "american") nil utf-8) ("brasileiro" "[a-záéíóúàèìòùãõçüâêôA-ZÁÉÍÓÚÀÈÌÒÙÃÕÇÜÂÊÔ]" "[^a-záéíóúàèìòùãõçüâêôA-ZÁÉÍÓÚÀÈÌÒÙÃÕÇÜÂÊÔ]" "[---']" t ("-d" "brasileiro") nil utf-8) (nil "[A-Za-z]" "[^A-Za-z]" "[']" nil ("-B") nil utf-8))) t)
+ '(ispell-dictionary-alist (quote (("american" "[a-zA-Z]" "[^a-zA-Z]" "[']" nil ("-d" "american") nil utf-8) ("brasileiro" "[a-zÃ¡Ã©Ã­Ã³ÃºÃ Ã¨Ã¬Ã²Ã¹Ã£ÃµÃ§Ã¼Ã¢ÃªÃ´A-ZÃÃ‰ÃÃ“ÃšÃ€ÃˆÃŒÃ’Ã™ÃƒÃ•Ã‡ÃœÃ‚ÃŠÃ”]" "[^a-zÃ¡Ã©Ã­Ã³ÃºÃ Ã¨Ã¬Ã²Ã¹Ã£ÃµÃ§Ã¼Ã¢ÃªÃ´A-ZÃÃ‰ÃÃ“ÃšÃ€ÃˆÃŒÃ’Ã™ÃƒÃ•Ã‡ÃœÃ‚ÃŠÃ”]" "[---']" t ("-d" "brasileiro") nil utf-8) (nil "[A-Za-z]" "[^A-Za-z]" "[']" nil ("-B") nil utf-8))) t)
  '(ispell-local-dictionary nil)
  '(lpr-command "mpage2")
  '(lpr-switches nil)
