@@ -1,0 +1,18 @@
+\documentclass[a4paper,twoside]{article}
+
+\input{stuff}
+\Portugues{}
+\usepackage{times}
+\usepackage{html}
+\usepackage{url}
+
+\title{Título}
+\author{Gustavo Leite de Mendonça Chaves}
+\date{\today{}}
+
+\begin{document}
+\maketitle
+
+
+
+\end{document}

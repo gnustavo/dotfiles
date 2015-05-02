@@ -1,0 +1,3 @@
+;-*-mode:emacs-lisp-*-
+
+(modify-coding-system-alist 'file "\\.git/[^/]+\\'" 'utf-8)

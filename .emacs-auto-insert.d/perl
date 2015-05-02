@@ -1,0 +1,74 @@
+#!/usr/bin/env perl
+
+use 5.010;
+use utf8;
+use strict;
+use warnings;
+use open IO => ':locale';
+use Encode;
+use Encode::Locale;
+use Getopt::Long::Descriptive;
+
+#use FindBin;
+#use lib "$FindBin::Bin/../lib/perl";
+#use CPqD::Utils qw/get_credentials/;
+
+Encode::Locale::decode_argv();
+
+my ($opt, $usage) = describe_options(
+    '%c %o <parameters>',
+    ['long=s',      "what this option do", {default => 'value', required => 1}],
+    [],
+    ['dont',        "do not do anything"],
+    ['verbose+',    "tell what I'm doing"],
+    ['help',        "print usage message and exit"],
+    {show_defaults => 1},
+);
+
+if ($opt->help) {
+    print $usage->text;
+    exit 0;
+}
+
+my @args = @ARGV or $usage->die({pre_text => "Missing argument.\n\n"});
+
+
+__END__
+=encoding utf8
+
+=head1 NAME
+
+template.pl - 
+
+=head1 SYNOPSIS
+
+template.pl OPTIONS
+
+=head1 DESCRIPTION
+
+=head1 OPTIONS
+
+=over
+
+=item * B<>
+
+=back
+
+=head1 ENVIRONMENT
+
+=head1 FILES
+
+=head1 EXIT CODES
+
+=head1 SEE ALSO
+
+=head1 COPYRIGHT
+
+Copyright 2015 CPqD.
+
+This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=head1 AUTHOR
+
+Gustavo Chaves <gustavo@cpqd.com.br>

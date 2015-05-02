@@ -1,0 +1,92 @@
+# -*- mode: conf -*-
+
+[init]
+        templatedir = /home/gustavo/share/git-core/templates
+
+[user]
+	name  = Gustavo L. de M. Chaves
+	email = gustavo@cpqd.com.br
+	signingkey = 14795E8E
+
+[core]
+        editor = emacs4git
+	excludesfile = /home/gustavo/.gitignore
+
+[color]
+	ui = auto
+
+[alias]
+	amend  = commit -v --amend
+	br     = branch -r
+	bv     = branch -vv
+        new    = checkout -b
+	ci     = commit -v
+	co     = checkout
+	d      = diff
+	dc     = diff --cached
+	f      = fetch --prune -v
+	l      = log --oneline --graph --decorate -30
+	la     = log --oneline --graph --decorate --all -30
+	las    = log --oneline --graph --decorate --stat --all -30
+	ll     = log --oneline --graph --decorate
+	lla    = log --oneline --graph --decorate --all
+	ls     = ls-tree -r --name-only --full-name
+        lg     = log --graph --pretty=format:'%Cred%h %Cblue(%<(16,trunc)<%an>)%Creset %s %C(yellow)%d%Creset' --abbrev-commit -30
+        llg    = log --graph --pretty=format:'%Cred%h %Cblue(%<(16,trunc)<%an>)%Creset %s %C(yellow)%d%Creset' --abbrev-commit
+        rgrep  = !git grep
+	s      = status --short
+	sb     = show-branch --more=5 --topo-order
+        server = !echo -R 9418:localhost:9418 && git daemon --export-all --base-path=/home/gustavo/git --reuseaddr --verbose
+	ss     = show --stat
+	st     = status
+        tree   = ls-tree -r --name-only HEAD
+	wip    = commit -a -mWIP
+
+[credential]
+        # http://stackoverflow.com/questions/13385690/how-to-use-git-with-gnome-keyring-integration
+        helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+
+[merge]
+	conflictstyle = diff3
+	tool = kdiff3
+        
+[push]
+	# http://git-blame.blogspot.com.br/2013/06/fun-with-various-workflows-1.html
+        default = upstream
+
+[sendemail]
+	smtpserver = smtp.gmail.com
+	smtpencryption = tls
+	smtpserverport = 587
+	smtpuser = gustavo@gnustavo.com
+	smtppass = invalid
+	suppresscc = self
+
+[githooks]
+        abort-commit = 0
+
+[githooks "checklog"]
+	title-max-width = 72
+
+[githooks "checkfile"]
+        name = *.p[lm] perlcritic --stern --verbose 10 --exclude RequireFilenameMatchesPackage
+        name = *.pp    puppet parser validate --verbose --debug
+        name = *.pp    puppet-lint --no-variable_scope-check --no-documentation-check --no-80chars-check --no-class_inherits_from_params_class-check --with-context --with-filename
+        name = *.sh    bash -n
+        # Executes ShellCheck tool (https://github.com/koalaman/shellcheck/wiki)
+        name = *.sh    shellcheck --exclude=SC2046,SC2053,SC2086
+        name = *.erb   erb -P -x -T - {} | ruby -c | sed '/Syntax OK/d'
+
+[github]
+        user = gnustavo
+
+[branch]
+        # http://episodes.gitminutes.com/2013/08/gitminutes-20-mick-wever-on-migrating.html
+	autosetuprebase = always
+
+[credential "https://github.com"]
+	username = gnustavo
+
+[git-gerrit "options"]
+	query = --limit 10
+	my = --limit 10
